@@ -1,0 +1,367 @@
+//
+// Imports
+@import '../assets/bootstrap/less/bootstrap.less';
+@import 'variables.less';
+@import 'typography.less';
+
+//
+// Some additional scaffolding
+.container { max-width: @screen-md; } // Max width on the container element
+
+// Grid element used for section with half gray half phone
+.grid-half {
+	float: left;
+	width: 100%;
+	max-width: 100%;
+
+	@media (min-width: @screen-sm) {
+		width: 50%;
+	}
+}
+
+
+//
+// Navbar
+.navbar {
+	font-family: @font-family-sans-serif-two;
+	background: none;
+	.transition(0.5s);
+}
+
+// Transition when container goes back to original state from affix adjustments
+.navbar .container { .transition(0.5s); }
+
+
+// Bootstrap plugin that adds affix to element when scrolled passed a
+// position defined by data-attribute
+.affix  {
+	.container {
+		margin-top: -20px;
+		.transition(0.5s);
+	}
+
+	.transition(0.5s);
+	background: rgb(0, 0, 0); /* The Fallback */
+	background: rgba(0, 0, 0, 0.5);
+	min-height: 25px;
+	height: 40px;
+}
+
+
+@media (min-width: @screen-sm) {
+	.navbar-nav { float: right; }
+}
+
+.navbar-nav a { letter-spacing: 1px; }
+
+//
+// Navbar brand
+.navbar-brand {
+	font-size: 24px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+// Dropdown
+.dropdown-menu { border: none; }
+.dropdown-menu > li > a {
+	padding: 15px 25px;
+	color: #fff;
+}
+
+.navbar-nav > li > a:hover { text-decoration: underline; }
+
+
+
+//
+// Hero quote sections
+.hero-quote {
+	display: inline-block;
+	width: 100%;
+
+	padding: 100px 0;
+	text-align: center;
+	color: white;
+
+	@media (min-width: @screen-sm) {
+		padding: 140px 0;
+	}
+}
+
+.hero-quote-text { display: none; }
+
+
+// Icon
+.hero-icon-huge a {
+	display: block;
+	font-size: 50px;
+
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	padding: 0 20px;
+}
+
+.arrow {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	margin-left:-40px;
+
+	@media (min-width: @screen-sm) {
+		bottom: 140px;
+	}
+
+	@media (min-width: 1400px) {
+		bottom: 300px;
+	}
+
+}
+
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+
+// First hero quote image
+.hero-quote-one {
+	background: #fe4444 no-repeat top center;
+	background: url('/img/hero-phone.jpg') no-repeat 20% 50%;
+	background-size: cover;
+
+	height: 700px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+// First hero quote image
+.hero-quote-two {
+	background: #fe4444 no-repeat top center;
+	background: url('/img/hero-jose.jpg') no-repeat 20% 50%;
+	background-size: cover;
+
+	min-height: 400px;
+}
+
+//
+// Hero quote text
+.hero-quote-words {
+	display: block;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+}
+
+@media (min-width: @screen-sm) {
+	.hero-quote-words {
+		font-size: 48px;
+	}
+}
+
+// Hero text person
+.hero-quote-person {
+	display: block;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+
+}
+
+
+//
+// Content
+#content {
+	display: inline-block; // Inherit it's childrens formatting
+	width: 100%; // Span width of page
+
+	position: relative;
+	top: 675px;
+
+	background-color: #fff;
+}
+
+
+//
+// Make it matter band
+#make-it-matter {
+	display: inline-block;
+	width: 100%;
+
+	background: @brand-primary;
+	padding: 50px 0;
+	text-align: center;
+	color: white;
+}
+
+@media (min-width: @screen-sm) {
+	#make-it-matter {
+		text-align: left;
+	}
+}
+
+
+// Type in make it matter section
+#make-it-matter .heading     { margin: 0 0 5px 0;  color: #fff; }
+#make-it-matter .sub-heading { margin: 0; color: #fff; }
+
+//
+// HCA Logo
+#make-it-matter .hca-logo {
+	margin: 40px auto;
+
+	@media (min-width: @screen-sm) {
+		margin: 10px auto;
+	}
+
+	img { max-width: 100%; }
+}
+
+
+#make-it-matter .icon-social {
+	text-align: right;
+	font-size: 40px;
+	margin-top: 40px;
+	@media (min-width: @screen-sm) {
+		margin-top: 10px;
+	}
+
+	a {
+		color: #fff;
+		margin-left: 30px; // Margin icon spacing
+		&:first-child { margin-left: 0; } // Exceot first child
+
+		&:hover { color: darken(#fff, 20%); }
+	}
+}
+
+
+
+
+
+
+//
+// Make matter section
+@make-matter-height: 450px;
+
+// General foramtting hacks
+#make-matter        { margin-top: -5px; }
+.make-matter-inside { max-width: 470px; }
+
+// Fitst area
+#make-matter .make-matter-one {
+	height: @make-matter-height - 100px;
+	overflow: hidden;
+	
+	@media (min-width: @screen-sm) {
+		height: @make-matter-height;
+	}
+}
+
+// iPhone image in make matter section
+#make-matter .make-matter-one img {
+	display: block;
+	max-width: 280px;
+	margin: 90px auto 0;
+}
+
+// Second area
+#make-matter .make-matter-two {
+	height: @make-matter-height;
+	overflow: hidden;
+
+	// Specific formatting
+	background: #EAEAEA;
+	box-sizing: border-box;
+
+	padding: 15px;
+	text-align: center;
+
+	@media (min-width: @screen-sm) {
+		padding: 60px;
+		text-align: left;
+	}
+}
+
+
+
+#make-matter .heading { margin: 0; }
+#make-matter .sub-heading { margin: 5px 0 30px 0; }
+
+
+//
+// Whats up
+.whats-up {
+	background-color: #EAEAEA;
+
+	text-align: center;
+	padding: 50px 0;
+
+	i { margin-left: 20px; }
+
+	.heading { font-size: 31px; }
+}
+
+
+//
+// Footer
+footer {
+	font-family: @font-family-sans-serif-two;
+	font-weight: 400;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: #333;
+
+	color: #e7e7e7;
+	text-align: center;
+
+	padding: 30px 0;
+}

@@ -1,0 +1,10 @@
+# Site settings
+title: Buixld
+email: eric.motil@hcahealthcare.com
+description: "Buixld is a user interface and user experience group within HCA Healthcare specializing in web design, mobile design and user interface design."
+baseurl: ""
+url: "http://buixld.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
