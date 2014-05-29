@@ -2080,7 +2080,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/extra.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/min\/extra.min.js": {
