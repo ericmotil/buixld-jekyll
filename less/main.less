@@ -1,11 +1,19 @@
-//
+/*
+	Name:      BUIXLD
+	Company:   HCA Healthcare
+	Author:    Eric Motil
+	Comments:  Make Matter
+*/
+
 // Imports
+//
 @import '../assets/bootstrap/less/bootstrap.less';
 @import 'variables.less';
 @import 'typography.less';
 
-//
+
 // Some additional scaffolding
+//
 .container { max-width: @screen-md; } // Max width on the container element
 
 // Grid element used for section with half gray half phone
@@ -20,12 +28,14 @@
 }
 
 
-//
 // Navbar
+//
 .navbar {
 	font-family: @font-family-sans-serif-two;
 	background: none;
 	.transition(0.5s);
+	
+	margin-bottom: 0;
 }
 
 // Transition when container goes back to original state from affix adjustments
@@ -42,7 +52,7 @@
 
 	.transition(0.5s);
 	background: rgb(0, 0, 0); /* The Fallback */
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
 	min-height: 25px;
 	height: 40px;
 }
@@ -72,6 +82,16 @@
 .navbar-nav > li > a:hover { text-decoration: underline; }
 
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	background: rgba(0, 0, 0, 0.7); 
+	border: none;
+}
+
+@media (min-width: @screen-sm) {
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background: transparent; 
+	}
+}
 
 //
 // Hero quote sections
@@ -266,11 +286,12 @@ animation-duration:2s;
 
 
 #make-it-matter .icon-social {
-	text-align: right;
-	font-size: 40px;
-	margin-top: 40px;
+	font-size: 31px;
+	margin-top: 35px;
 	@media (min-width: @screen-sm) {
 		margin-top: 10px;
+		text-align: right;
+		font-size: 40px;
 	}
 
 	a {
@@ -289,7 +310,7 @@ animation-duration:2s;
 
 //
 // Make matter section
-@make-matter-height: 450px;
+@make-matter-height: 500px;
 
 // General foramtting hacks
 #make-matter        { margin-top: -5px; }
@@ -347,6 +368,8 @@ animation-duration:2s;
 	i { margin-left: 20px; }
 
 	.heading { font-size: 31px; }
+	
+	a { font-size: 31px; }
 }
 
 

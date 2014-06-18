@@ -18,15 +18,14 @@ $(document).ready(function(){
 
 	// Fade in the Hero yah!
 	$(".hero-quote-text").fadeIn(1500);
-	
-	// Paralaxxxy background thingy
-	$(window).scroll(function(){
-     
-		var scrollPos = $("body").scrollTop();
-		console.log(scrollPos);
-		if (scrollPos > 1) {
-			$(".hero-quote-one").css( "top", -(scrollPos / 2) )
-		}
-	});
+});
 
+
+function parallaxed(){
+	var scrolled = $(window).scrollTop();
+	$('.parallaxed').css('top', -(scrolled * 0.29) + 'px');
+}
+
+$(window).scroll(function(e){
+	parallaxed();
 });

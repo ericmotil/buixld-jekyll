@@ -1,3 +1,9 @@
+/*
+	Name:      BUIXLD
+	Company:   HCA Healthcare
+	Author:    Eric Motil
+	Comments:  Make Matter
+*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -4057,14 +4063,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  border-color: transparent;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
+  background-color: #ffffff;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -6109,6 +6115,7 @@ p {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  margin-bottom: 0;
 }
 .navbar .container {
   -webkit-transition: 0.5s;
@@ -6121,7 +6128,7 @@ p {
   transition: 0.5s;
   background: #000000;
   /* The Fallback */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   min-height: 25px;
   height: 40px;
 }
@@ -6153,6 +6160,17 @@ p {
 }
 .navbar-nav > li > a:hover {
   text-decoration: underline;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    background: transparent;
+  }
 }
 .hero-quote {
   display: inline-block;
@@ -6349,13 +6367,14 @@ p {
   max-width: 100%;
 }
 #make-it-matter .icon-social {
-  text-align: right;
-  font-size: 40px;
-  margin-top: 40px;
+  font-size: 31px;
+  margin-top: 35px;
 }
 @media (min-width: 768px) {
   #make-it-matter .icon-social {
     margin-top: 10px;
+    text-align: right;
+    font-size: 40px;
   }
 }
 #make-it-matter .icon-social a {
@@ -6375,12 +6394,12 @@ p {
   max-width: 470px;
 }
 #make-matter .make-matter-one {
-  height: 350px;
+  height: 400px;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   #make-matter .make-matter-one {
-    height: 450px;
+    height: 500px;
   }
 }
 #make-matter .make-matter-one img {
@@ -6389,7 +6408,7 @@ p {
   margin: 90px auto 0;
 }
 #make-matter .make-matter-two {
-  height: 450px;
+  height: 500px;
   overflow: hidden;
   background: #EAEAEA;
   box-sizing: border-box;
@@ -6417,6 +6436,9 @@ p {
   margin-left: 20px;
 }
 .whats-up .heading {
+  font-size: 31px;
+}
+.whats-up a {
   font-size: 31px;
 }
 footer {
